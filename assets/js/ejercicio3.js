@@ -14,7 +14,7 @@ const validar = (result) => {
     }
 }
 
-const regex = new RegExp('\\d')
+const regex = new RegExp('^-?\\d+$')
 
 const valor1 = document.getElementById('valor1')
 const valor2 = document.getElementById('valor2')
@@ -29,7 +29,7 @@ btnSumar.addEventListener('click', e => {
         const num2 = parseFloat(valor2.value)
         resultado.innerHTML = validar(sumar(num1, num2))
     } else {
-        alert('Por favor ingrese solo números')
+        alert('Por favor ingrese solo números enteros')
     }
 })
 
@@ -39,6 +39,6 @@ btnRestar.addEventListener('click', e => {
         const num2 = parseFloat(valor2.value)
         resultado.innerHTML = validar(restar(num1, num2))
     } else {
-        alert('Por favor ingrese solo números')
+        alert('Por favor ingrese solo números enteros')
     }
 })
